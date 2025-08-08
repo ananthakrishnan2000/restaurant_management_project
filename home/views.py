@@ -7,5 +7,3 @@ def home_view(request):
 
     } 
     return render(request, 'home/index.html' , context)
-
-# Create your views here.
