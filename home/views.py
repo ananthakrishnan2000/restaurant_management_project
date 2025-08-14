@@ -1,12 +1,10 @@
 from django.conf import settings
 from django.shortcuts import render
 
-def menu_items(request):
-    items = [
-        {"name": "Fish Nirvana", "price": "$5"},
-        {"name": "Chicken Biriyani", "price": "$8"},
-        {"name": "Porota", "price": "$2"},
-        {"name": "Tea", "price": "$1"}
-    ]
+def home(request):
+    context = {
+       "restaurant_name": "The Windsor Castle",
+       "welcome_message": "Welcome to our restaurant! Enjoy your dining experience."
+    }
     
-    return render(request, "menu.html" , {"items": items})
+    return render(request, "home.html" , context)
